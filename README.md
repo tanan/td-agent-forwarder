@@ -13,14 +13,15 @@ http://komamitsu.hatenablog.com/entry/2015/12/07/003335
 
 ### Setting
 - td-agent
-<code>
-\<source\>  
+
+**code**
+    \<source\>
   type forward  
   port 24224  
 \</source\>  
 \<match td.*.*\>    
-  type tdlog    
-  endpoint api.treasuredata.com  
+  type tdlog
+  endpoint api.treasuredata.com
   apikey 4148/e53be904f093ebd4b4b8e6a19b6f57515556740b  
   auto_create_table  
   num_threads 4  
@@ -31,4 +32,4 @@ http://komamitsu.hatenablog.com/entry/2015/12/07/003335
   buffer_queue_limit 5000  
   use_ssl true  
 \</match\>  
-</code>
+
