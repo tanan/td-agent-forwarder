@@ -38,4 +38,34 @@ http://komamitsu.hatenablog.com/entry/2015/12/07/003335
       use_ssl true  
     
     </match>  
+
+- app.config
+
+`
     
+    <configuration>
+      <database>td.work_dev</database>
+      <tablename>anan_cookie_COMPASS</tablename>
+      <folder>/var/samba/deqwas/test</folder>
+      <filename>File*.tsv</filename>
+      <columns>col1,col2...</columns>
+      <columntype>col1:integer</columntype>
+    </configuration>
+    
+
+- TdLogForwarder.sh
+
+`
+
+    #!/bin/bash
+    EXECUTE_HOME=/opt/TdLogForwarder
+    JAVA_HOME=/usr/bin/java
+    CLASSPATH=$EXECUTE_HOME/config
+    JAVA_OPTS="-DparserConfigurationFile=$EXECUTE_HOME/config/$1"
+    
+    for lib in `ls -1 $EXECUTE_HOME/lib/*.jar` ; do
+      CLASSPATH=$CLASSPATH:$lib
+    done
+    
+    $JAVA_HOME $JAVA_OPTS -cp $CLASSPATH Td.LogForwarder.LogForwarder
+
