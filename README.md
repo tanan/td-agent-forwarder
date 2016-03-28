@@ -50,6 +50,11 @@ http://komamitsu.hatenablog.com/entry/2015/12/07/003335
       <filename>File*.tsv</filename>
       <columns>col1,col2...</columns>
       <columntype>col1:integer</columntype>
+      <pPort>24224</pPort>
+      <sPort>24225</sPort>
+      <maxBufferSize>33554432</maxBufferSize>
+      <flushIntervalMillis>200</flushIntervalMillis>
+      <maxRetryCount>12</maxRetryCount>
     </configuration>
     
 
