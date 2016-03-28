@@ -11,7 +11,7 @@ http://komamitsu.hatenablog.com/entry/2015/12/07/003335
 - Java1.8 or higher
 - td-agent
 
-### Setting
+## Setting
 - td-agent
 
 `
@@ -69,3 +69,5 @@ http://komamitsu.hatenablog.com/entry/2015/12/07/003335
     
     $JAVA_HOME $JAVA_OPTS -cp $CLASSPATH Td.LogForwarder.LogForwarder
 
+## Execute
+bash /opt/TdLogForwarder/bin/TdLogForwarder.sh \<config file\>
